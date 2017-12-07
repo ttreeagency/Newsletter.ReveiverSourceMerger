@@ -1,0 +1,19 @@
+{
+    "description": "Merge mutliple ReceiverGroup in a single one for Sandstorm Newsletter package",
+    "type": "neos-package",
+    "name": "ttree/newsletter-reveiversourcemerger",
+    "license": "MIT",
+    "require": {
+        "sandstorm/newsletter": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ttree\\Newsletter\\ReveiverSourceMerger": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Ttree.Newsletter.ReveiverSourceMerger"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+Sandstorm:
+  Newsletter:
+    receiverSourceTypes:
+      'TtreeReceiverSourceMerger':
+        label: 'Receiver Group Merger'
+        className: \Ttree\Newsletter\ReveiverSourceMerger\Domain\Model\ReceiverSourceMerger

@@ -1,0 +1,22 @@
+{namespace sandstorm=Sandstorm\Newsletter\ViewHelpers}
+<fieldset class="neos-span12">
+    <legend>CSV Receiver Source Configuration</legend>
+
+    <div class="neos-control-group{f:validation.ifHasErrors(for: 'receiverSource.sources', then: ' neos-error')}">
+        <label class="neos-control-label" for="sources">Parent ReceiverGroups</label>
+        <div class="neos-controls">
+            <sandstorm:form.ReceiverSourceSelect property="sources" multiple="true" size="12" id="sources" style="height: auto;" />
+            <f:render partial="FieldValidationResults" arguments="{fieldname: 'receiverSource.sources'}"/>
+        </div>
+    </div>
+
+    <div class="neos-control-group{f:validation.ifHasErrors(for: 'receiverSource.defaults', then: ' neos-error')}">
+        <label class="neos-control-label" for="sources">Enforced default values</label>
+        <div class="neos-controls">
+            <f:form.textarea rows="12" property="defaults" id="defaults" class="neos-span6" />
+            <f:render partial="FieldValidationResults" arguments="{fieldname: 'receiverSource.defaults'}"/>
+        </div>
+    </div>
+</fieldset>
+
+<f:render partial="DimensionFilterFormFields" arguments="{_all}" />
