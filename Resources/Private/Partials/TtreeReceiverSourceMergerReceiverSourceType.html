@@ -1,11 +1,11 @@
-{namespace sandstorm=Sandstorm\Newsletter\ViewHelpers}
+{namespace newsletter=Ttree\Newsletter\ReveiverSourceMerger\ViewHelpers}
 <fieldset class="neos-span12">
     <legend>CSV Receiver Source Configuration</legend>
 
     <div class="neos-control-group{f:validation.ifHasErrors(for: 'receiverSource.sources', then: ' neos-error')}">
         <label class="neos-control-label" for="sources">Parent ReceiverGroups</label>
         <div class="neos-controls">
-            <sandstorm:form.ReceiverSourceSelect property="sources" multiple="true" size="12" id="sources" style="height: auto;" />
+            <newsletter:receiverSourceSelect property="sources" multiple="true" size="12" id="sources" style="height: auto;" />
             <f:render partial="FieldValidationResults" arguments="{fieldname: 'receiverSource.sources'}"/>
         </div>
     </div>
